@@ -1,2 +1,2 @@
-http://yoursite.com/child/2020/05/16/wan-ju-liu-lan-qi/
-http://yoursite.com/child/2020/02/16/sort-algorithms/
+https://github.com/12138qzj/Blog.github.ios/2020/05/16/wan-ju-liu-lan-qi/
+https://github.com/12138qzj/Blog.github.ios/2020/02/16/sort-algorithms/
