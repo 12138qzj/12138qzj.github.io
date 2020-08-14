@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/12138qzj/12138qzj.github.io/"/>
-  <updated>2020-08-10T15:06:31.168Z</updated>
+  <updated>2020-08-14T05:24:15.587Z</updated>
   <id>https://github.com/12138qzj/12138qzj.github.io/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTTP学习篇</title>
+    <link href="https://github.com/12138qzj/12138qzj.github.io/2020/08/01/http-xue-xi-pian/"/>
+    <id>https://github.com/12138qzj/12138qzj.github.io/2020/08/01/http-xue-xi-pian/</id>
+    <published>2020-08-01T05:23:23.000Z</published>
+    <updated>2020-08-14T05:24:15.587Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>玩具浏览器（附代码）</title>
