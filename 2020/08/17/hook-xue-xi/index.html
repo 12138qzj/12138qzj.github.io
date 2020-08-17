@@ -4,12 +4,11 @@
 
     <head><meta name="generator" content="Hexo 3.9.0">
         <meta charset="utf-8">
-        <meta name="keywords" content="HTTP学习篇, ECUT github DeepLearning leetcode 小杰 xiaojie">
+        <meta name="keywords" content="hook学习, ECUT github DeepLearning leetcode 小杰 xiaojie">
         <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-        <meta name="description" content="TCP/IP协议族分层 tcp/ip协议族分为四层：应用层，传输层，网络层，数据链路层
-
-
-计算机与网络设备要相互通信，双方就必须基于相同的方法。比如，如何探测到通信目标、由哪一边先发起通信、使用哪种语言进行通信、怎样结束通信等规则都需要事">
+        <meta name="description" content="useStateuseState返回状态（返回为useState中的参数） 会存在state
+//整个context 的状态模拟 
+const [ state, setTheme ] = useState({ theme: &#39;red&#39; })">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +17,7 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <title>
-            HTTP学习篇 | 小杰的博客
+            hook学习 | 小杰的博客
         </title>
         <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -335,13 +334,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        HTTP学习篇
+                        hook学习
                     </div>
                 </div>
             </div>
@@ -452,12 +451,12 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/浏览器/" target="_blank">
-                            <span class="chip bg-color">浏览器</span>
+                        <a href="/tags/react/" target="_blank">
+                            <span class="chip bg-color">react</span>
                         </a>
                         
-                        <a href="/tags/HTTP/" target="_blank">
-                            <span class="chip bg-color">HTTP</span>
+                        <a href="/tags/hook/" target="_blank">
+                            <span class="chip bg-color">hook</span>
                         </a>
                         
                     </div>
@@ -471,7 +470,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-01
+                    2020-08-17
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -485,14 +484,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    563
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    2 分
                 </div>
                 
                 
@@ -503,51 +502,50 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="TCP-IP协议族分层"><a href="#TCP-IP协议族分层" class="headerlink" title="TCP/IP协议族分层"></a>TCP/IP协议族分层</h2><p> tcp/ip协议族分为四层：<strong>应用层，传输层，网络层，数据链路层</strong></p>
-<img src="四层.png" alt="2" style="zoom:60%;">
+                <h4 id="useState"><a href="#useState" class="headerlink" title="useState"></a>useState</h4><p>useState返回状态（返回为useState中的参数） 会存在state</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//整个context 的状态模拟 </span>
+<span class="token keyword">const</span> <span class="token punctuation">[</span> state<span class="token punctuation">,</span> setTheme <span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> theme<span class="token punctuation">:</span> <span class="token string">'red'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="优化学习"><a href="#优化学习" class="headerlink" title="优化学习"></a>优化学习</h3><ol>
+<li>hooks 特色</li>
+</ol>
+<h4 id="useState-1"><a href="#useState-1" class="headerlink" title="useState"></a>useState</h4><p>​    useState(参数/函数)</p>
+<p>​    useState((prevstate)=&gt;prevState+10)</p>
+<h5 id="useEffect"><a href="#useEffect" class="headerlink" title="useEffect"></a>useEffect</h5><p>​    生命周期的替代</p>
+<p>​    - 在return 完执行 &lt;====&gt; 与componentDidMount生命周期一样</p>
+<p>​    根据依赖是state 在状态执行的时候改变依赖，执行 &lt;====&gt; 与</p>
+<h5 id="useContext"><a href="#useContext" class="headerlink" title="useContext"></a>useContext</h5><p>​    复杂的state的父传子 传值优化</p>
+<p>​    当需要超过两层组件传值的时候 使用这个来优化 他没有reducer这么复杂，忽略，且比useState使用更简洁。</p>
+<p>​    创建 </p>
+<p>​    1. 创建一个：export const ThemeContext = React.createContext( 参数/<strong>存入的值</strong>/);</p>
+<pre><code>```jsx
+&lt;ThemeContext.Provider value={themes.dark}&gt;
+  &lt;Toolbar /&gt;
+&lt;/ThemeContext.Provider&gt;
 
-<p>计算机与网络设备要相互通信，双方就必须基于相同的方法。比如，如何探测到通信目标、由哪一边先发起通信、使用哪种语言进行通信、怎样结束通信等规则都需要事先确定。不同的硬件、操作系统之间的通信，所有的这一切都需要一种规则。而我们就把这种规则称为协议</p>
-<p>TCP/IP协议族各层的作用如下。</p>
-<h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><p>应用层决定了向用户提供应用服务时通信的活动。TCP/IP协议族内预存了各类通用的应用服务。比如，FTP（File Transfer Protocol，文件传输协议）和DNS（Domain Name System，域名系统）服务就是其中两类。HTTP协议也处于该层。</p>
-<h3 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h3><p>传输层对上层应用层，提供处于网络连接中的两台计算机之间的数据传输。在传输层有两个性质不同的协议：<strong>TCP（Transmission Control Protocol，传输控制协议）和UDP（User Data Protocol，用户数据报协议）</strong>。</p>
-<h3 id="网络层（又名网络互连层）"><a href="#网络层（又名网络互连层）" class="headerlink" title="网络层（又名网络互连层）"></a>网络层（又名网络互连层）</h3><p><strong>网络层用来处理在网络上流动的数据包</strong>。数据包是网络传输的最小数据单位。该层规定了通过怎样的路径（所谓的传输路线）到达对方计算机，并把数据包传送给对方。与对方计算机之间通过多台计算机或网络设备进行传输时，<strong>网络层所起的作用就是在众多的选项内选择一条传输路线。</strong></p>
-<h3 id="链路层（又名数据链路层，网络接口层）"><a href="#链路层（又名数据链路层，网络接口层）" class="headerlink" title="链路层（又名数据链路层，网络接口层）"></a>链路层（又名数据链路层，网络接口层）</h3><p><strong>用来处理连接网络的硬件部分</strong>。包括控制操作系统、硬件的设备驱动、NIC（NetworkInterface Card，网络适配器，即网卡），及光纤等物理可见部分（还包括连接器等一切传输媒介）。<strong>硬件上的范畴均在链路层的作用范围之内</strong>。</p>
-<h2 id="http数据传输的过程客户端-服务端"><a href="#http数据传输的过程客户端-服务端" class="headerlink" title="http数据传输的过程客户端-服务端"></a>http数据传输的过程客户端-服务端</h2><p><img src="http%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B.png" alt="数据封装"></p>
-<p><strong>浏览器输入地址=&gt;在本地DNS服务器上查找域名ip=&gt;返回给浏览器ip的情况=&gt;然后通过TCP/IP（三次握手）连接服务器=&gt;然后数据传输=&gt;四次挥手断开连接</strong></p>
-<p>完成一次http的访问。</p>
-<h3 id="DNS服务（使用DNS协议）"><a href="#DNS服务（使用DNS协议）" class="headerlink" title="DNS服务（使用DNS协议）"></a>DNS服务（使用DNS协议）</h3><p>​        DNS服务应运而生。DNS协议提供通过域名查找IP地址，或逆向从IP地址反查域名的服务。</p>
-<p><img src="image-20200517211619609.png" alt="image-20200517211619609"></p>
-<h3 id="DNS域名解析完之后-数据打包"><a href="#DNS域名解析完之后-数据打包" class="headerlink" title="DNS域名解析完之后-数据打包"></a>DNS域名解析完之后-数据打包</h3><p><img src="%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85.png" alt="数据封装"></p>
-<h3 id="HTTP数据传输过程"><a href="#HTTP数据传输过程" class="headerlink" title="HTTP数据传输过程"></a>HTTP数据传输过程</h3><p> 为了传输方便，在传输层（TCP协议）把从应用层处收到的数据（HTTP请求报文）进行分割，并在各个报文上打上标记序号及端口号后转发给网络层。</p>
-<p><img src="image-20200517191757183.png" alt="image-20200517191757183"></p>
-<p><img src="http%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E8%BF%87%E7%A8%8B.png" alt="http数据传输过程"></p>
-<p><strong>ARP</strong>是一种用以解析地址的协议，根据通信方的IP地址就可以反查出对应的MAC地址。</p>
-<h3 id="网关-代理服务器"><a href="#网关-代理服务器" class="headerlink" title="网关-代理服务器"></a>网关-代理服务器</h3><h4 id="1-网关"><a href="#1-网关" class="headerlink" title="1.网关"></a>1.网关</h4><p>​        <strong>作用：</strong>网关的工作机制和代理十分相似。而网关能使通信线路上的服务器提供非HTTP协议服务。</p>
-<p>​        利用网关能提高通信的安全性，因为可以在客户端与网关之间的通信线路上加密以确保连接的安全。比如，网关可以连接数据库，使用SQL语句查询数据。另外，在Web购物网站上进行信用卡结算时，网关可以和信用卡结算系统联动。</p>
-<p><img src="image-20200517215504244.png" alt="image-20200517215504244"></p>
-<h4 id="2-代理服务器"><a href="#2-代理服务器" class="headerlink" title="2.代理服务器"></a>2.代理服务器</h4><p>​        <strong>作用：</strong>代理服务器的基本行为就是接收客户端发送的请求后转发给其他服务器。代理不改变请求URI，会直接发送给前方持有资源的目标服务器。</p>
-<p><img src="image-20200517215617647.png" alt="image-20200517215617647"></p>
-<h4 id="3-隧道"><a href="#3-隧道" class="headerlink" title="3.隧道"></a>3.隧道</h4><p>​            <strong>作用：</strong>隧道可按要求建立起一条与其他服务器的通信线路，届时使用SSL等加密手段进行通信。隧道的目的是确保客户端能与服务器进行安全的通信。隧道本身不会去解析HTTP请求。也就是说，请求保持原样中转给之后的服务器。隧道会在通信双方断开连接时结束。</p>
-<p><img src="image-20200517215911886.png" alt="image-20200517215911886"></p>
-<h2 id="HTTP-1-1-首部字段一览-47个首部–通用，请求，响应，实体）"><a href="#HTTP-1-1-首部字段一览-47个首部–通用，请求，响应，实体）" class="headerlink" title="HTTP/1.1 首部字段一览(47个首部–通用，请求，响应，实体）"></a>HTTP/1.1 首部字段一览(47个首部–通用，请求，响应，实体）</h2><h3 id="通用头部"><a href="#通用头部" class="headerlink" title="通用头部"></a>通用头部</h3><p><img src="image-20200518090100570.png" alt="image-20200518090100570"></p>
-<h3 id="请求头部"><a href="#请求头部" class="headerlink" title="请求头部"></a>请求头部</h3><p><img src="image-20200518090221053.png" alt="image-20200518090221053"></p>
-<h3 id="响应头部"><a href="#响应头部" class="headerlink" title="响应头部"></a>响应头部</h3><p><img src="image-20200518090240543.png" alt="image-20200518090240543"></p>
-<h3 id="实体头部"><a href="#实体头部" class="headerlink" title="实体头部"></a>实体头部</h3><p><img src="image-20200518090256405.png" alt="image-20200518090256405"></p>
-<h2 id="HTTP缓存机制"><a href="#HTTP缓存机制" class="headerlink" title="HTTP缓存机制"></a>HTTP缓存机制</h2><h3 id="（1）Expires缓存"><a href="#（1）Expires缓存" class="headerlink" title="（1）Expires缓存"></a>（1）Expires缓存</h3><p><img src="image-20200518093115611.png" alt="image-20200518093115611"></p>
-<h3 id="（2）Last-Modified——-if-modified-since缓存"><a href="#（2）Last-Modified——-if-modified-since缓存" class="headerlink" title="（2）Last-Modified——-if-modified-since缓存"></a>（2）Last-Modified——-if-modified-since缓存</h3><p><strong>第一次访问</strong>设置<strong>Last-Modified</strong></p>
-<p>res.setHeader(‘Last-Modified’, status.mtime);设置最后访问时间</p>
-<p><strong>第二次访问</strong>的时候就会在请求头中加入<strong>if-modified-since</strong>该时间为第一次访问时<strong>Last-Modified</strong>的时间</p>
-<p>if (req.headers[‘if-modified-since’] == status.mtime) </p>
-<h4 id="—缺点"><a href="#—缺点" class="headerlink" title="—缺点"></a>—缺点</h4><p>​    <strong>当在同一秒访问的时候，时间将不会改变，则无法检测文件是否改变</strong></p>
-<p><img src="image-20200518093204257.png" alt="image-20200518093204257"></p>
-<h3 id="（3）Etag—if-none-match-版本号-缓存机制"><a href="#（3）Etag—if-none-match-版本号-缓存机制" class="headerlink" title="（3）Etag—if-none-match(版本号)缓存机制"></a>（3）Etag—if-none-match(版本号)缓存机制</h3><p>第一次访问的时候设置版本号，响应头里面存在 <code>Etag：version</code></p>
-<p>再次访问的时候，浏览器将<code>Etag：version</code>加到请求头里面为：<code>if-none-match：version</code></p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"> res<span class="token punctuation">.</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token string">'Etag'</span><span class="token punctuation">,</span> version<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//设置版本号</span>
-<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">Number</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>headers<span class="token punctuation">[</span><span class="token string">'if-none-match'</span><span class="token punctuation">]</span> <span class="token operator">==</span> version<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//判断版本号  </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h3 id="（4-md5-hash缓存"><a href="#（4-md5-hash缓存" class="headerlink" title="（4)md5/hash缓存"></a>（4)md5/hash缓存</h3><p>​    通过不缓存html,为静态文件添加MD5或者hash标识，解决浏览器无法跳过缓存过期时间主动感知文件变化的问题</p>
-<h3 id="5-CDN缓存"><a href="#5-CDN缓存" class="headerlink" title="(5)CDN缓存"></a>(5)CDN缓存</h3><p>​    CDN是构建在网络之上的内容分发网络，依靠部署哎各地的边缘服务器，通过中心平台的负载均衡，内容分发，调度等功能模块，使用户就近获取所需内容，减低网络拥塞，提高用户访问响应速度和命中率。</p>
-<p>​    如同代理一样，设置缓存过期时间，</p>
-<p><img src="image-20200518094603537.png" alt="image-20200518094603537"></p>
+//使用原始的获取值方法 太复杂
+ // 导入 ThemeContext
+  &lt;ThemeContext.Comsumer &gt;
+    {
+      user=&gt;{
+      }
+    }
+  &lt;/ThemeContext.Comsumer&gt;
+```</code></pre><p>​    2. 在Toolbar中使用 const Theme=useContext(ThemeContext) 就能获取这个值</p>
+<h5 id="useReducer"><a href="#useReducer" class="headerlink" title="useReducer"></a>useReducer</h5><p>​    三个参数 1. reducer 函数 2. 初始值 3. 初始值计算函数</p>
+<p>​    - redux 是企业级的数据状态安全流程及架构</p>
+<p>​      - state 可读的</p>
+<p>​      - state 写操作 disptch action-&gt;reducer -&gt;旧新状态的操作</p>
+<p>​    只是共享 reducer 函数 具体数据不能共享 ，只是useState的替代方案</p>
+<h5 id="useCallback"><a href="#useCallback" class="headerlink" title="useCallback"></a>useCallback</h5><p>​    使用：返回一个函数做优化</p>
+<p>​    是因为父组件改变了值 会发生重新渲染 导致父组件的js函数也会重新渲染一次，导致子组件也重新渲染。</p>
+<p>   优化场景：</p>
+<p>​    1. 当我们将一个函数作为参数，传递给子组件的时候，使用useCallback对函数进行处理</p>
+<p>​    2. useCallback会根据依赖是否发生改变，判断是否改变返回函数，</p>
+<p>​    然后子组件使用memo(子组件名)变成高阶组件，</p>
+<p>​    3. memo()高阶组件的使用， 会根据props进行浅层比较 该变则会重新渲染</p>
+<h5 id="useMemo"><a href="#useMemo" class="headerlink" title="useMemo"></a>useMemo</h5><p>​    使用：也会返回一个memozied（记忆的）值</p>
+<p>​    优化：对返回值做优化 返回值可以是（对象，数组，函数）</p>
+<p>​    场景：当我们使用一个常量，传递给子组件的时候，当父组件state值改变整个函数是会发生重新执行的，然后子组件也会重新渲染。<strong><em>\</em>优化：**</strong>将这个常量使用useMemo返回。 </p>
 
             </div>
             <hr />
@@ -706,9 +704,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《HTTP学习篇》
+                    《hook学习》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/08/01/http-xue-xi-pian/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/08/17/hook-xue-xi/" property="cc:attributionName"
                rel="cc:attributionURL">
                 小杰
             </a> 采用
@@ -748,9 +746,59 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/08/17/hook-xue-xi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="hook学习">
+                        
+                        <span class="card-title">hook学习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            useStateuseState返回状态（返回为useState中的参数） 会存在state
+//整个context 的状态模拟 
+const [ state, setTheme ] = useState({ theme: 'red' })
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-17
+                            </span>
+                        <span class="publish-author">
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/react/" target="_blank">
+                        <span class="chip bg-color">react</span>
+                    </a>
+                    
+                    <a href="/tags/hook/" target="_blank">
+                        <span class="chip bg-color">hook</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/08/05/redux-xue-xi-bi-ji/">
                     <div class="card-image">
@@ -781,9 +829,9 @@ State是只读的
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-08-05
+                            </span>
                         <span class="publish-author">
                             
                         </span>
@@ -798,59 +846,6 @@ State是只读的
                     
                     <a href="/tags/redux/" target="_blank">
                         <span class="chip bg-color">redux</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/05/16/wan-ju-liu-lan-qi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="玩具浏览器（附代码）">
-                        
-                        <span class="card-title">玩具浏览器（附代码）</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            本文记录了浏览器的渲染流程。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-16
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/浏览器渲染/" class="post-category" target="_blank">
-                                    浏览器渲染
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/浏览器/" target="_blank">
-                        <span class="chip bg-color">浏览器</span>
-                    </a>
-                    
-                    <a href="/tags/原理/" target="_blank">
-                        <span class="chip bg-color">原理</span>
                     </a>
                     
                 </div>
