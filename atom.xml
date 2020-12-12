@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/12138qzj/12138qzj.github.io/"/>
-  <updated>2020-08-23T02:49:30.091Z</updated>
+  <updated>2020-12-12T08:49:50.999Z</updated>
   <id>https://github.com/12138qzj/12138qzj.github.io/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git命令操作</title>
+    <link href="https://github.com/12138qzj/12138qzj.github.io/2020/12/12/git-ming-ling-cao-zuo/"/>
+    <id>https://github.com/12138qzj/12138qzj.github.io/2020/12/12/git-ming-ling-cao-zuo/</id>
+    <published>2020-12-12T08:49:50.000Z</published>
+    <updated>2020-12-12T08:49:50.999Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>web缓存</title>
